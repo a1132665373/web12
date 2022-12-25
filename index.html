@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myCopy() {
+            var copy = document.getElementById('copy').value;
+            var paste = document.getElementById('paste');
+            var tips = document.getElementById('tips');
+            if (copy !== null && copy !== "") {
+                paste.value = copy;
+                tips.innerHTML = "复制成功！";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="copy">
+    <input type="button" id="btn" value="复制" onclick="myCopy()">
+    <input type="text" id="paste" readonly="readonly"><br>
+    <span id="tips"></span>
+</body>
+
+</html>
